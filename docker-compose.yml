@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    image: nginx:alpine
+    container_name: static-html-stikom-rework
+    ports:
+      - "83:80"
+    volumes:
+      - ./:/usr/share/nginx/html
+    restart: unless-stopped
